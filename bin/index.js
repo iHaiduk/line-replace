@@ -83,7 +83,7 @@ function getResultMessage(type, data) {
     changed,
     error: `
       Replacement on '${fileLine}' FAILED:
-      ${error.message}
+      ${error && error.message}
     `
   }
 
