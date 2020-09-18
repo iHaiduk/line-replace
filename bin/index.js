@@ -76,17 +76,15 @@ function getResultMessage(type, data) {
   ${text}
   `
 
-  const error = `
-  Replacement on '${fileLine}' FAILED:
-  ${error.message}
-  `
-
   const messages = {
     blankLineReplaced,
     noChanges,
     lineCleared,
     changed,
-    error
+    error: `
+      Replacement on '${fileLine}' FAILED:
+      ${error.message}
+    `
   }
 
   return messages[type]
